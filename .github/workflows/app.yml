@@ -14,4 +14,4 @@ jobs:
         uses: actions/checkout@v2
       - run: pwd
       - run: ls
-     
+      - run: sonar-scanner -Dsonar.token=sqa_2a1ddb6a1153cea251fa9707f7b2454f45de3948
