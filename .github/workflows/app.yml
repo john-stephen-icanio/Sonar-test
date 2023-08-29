@@ -12,7 +12,6 @@ jobs:
         with:
           node-version: '18'
       - name: send to sonarqube
-      - run: npm install
       - uses: sonarsource/sonarqube-scan-action@master
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
