@@ -3,16 +3,8 @@ on: push
 
 jobs:
   SonarQube:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
-      - name: checkout repo
-        uses: actions/checkout@v2
-      - name: setup node
-        uses: actions/setup-node@v1
-        with:
-          node-version: '18'
-      - name: send to sonarqube
-        uses: sonarsource/sonarqube-scan-action@master
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+      - run: pwd
+      - run: ls
+      - run: sonar-scanner -Dsonar.token=${{ secrets.SONAR_TOKEN }}
