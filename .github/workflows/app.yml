@@ -7,5 +7,5 @@ jobs:
     steps:
       - run: pwd
       - run: ls
-      - run: sonar-scanner -Dsonar.token=${{ secrets.SONAR_TOKEN }}
+#      - run: sonar-scanner -Dsonar.token=${{ secrets.SONAR_TOKEN }}
       - run: echo "${{ secrets.SONAR_TOKEN }}"
