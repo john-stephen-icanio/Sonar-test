@@ -3,7 +3,7 @@ on: push
 
 jobs:
   SonarQube:
-    runs-on: [self-hosted, linux, ARM64]
+    runs-on: [self-hosted, linux, x64]
     steps:
       - run: pwd
       - run: ls
