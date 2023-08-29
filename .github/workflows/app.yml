@@ -1,15 +1,18 @@
-name: Sonar Scanner
+name: Sample Node js Applications
 on:
   push:
     branches:
       - '*'
 
-
 jobs:
-  SonarQube:
+  node-js-demo:
     runs-on: [self-hosted, linux, x64]
     steps:
+
       - run: pwd
       - run: ls
+
+      - run: git checkout ${GITHUB_REF#refs/heads/}
+
 #      - run: sonar-scanner -Dsonar.token=${{ secrets.SONAR_TOKEN }}
 #      - run: echo "${{ secrets.SONAR_TOKEN }}"
