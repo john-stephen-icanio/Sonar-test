@@ -8,11 +8,11 @@ jobs:
   node-js-demo:
     runs-on: [self-hosted, linux, x64]
     steps:
-      - run: actions/checkout@v2
       - run: pwd
       - run: ls
-
-      - run: git checkout ${GITHUB_REF#refs/heads/}
-
+      - name: mog
+        uses: actions/checkout@v2
+      - run: pwd
+      - run: ls
 #      - run: sonar-scanner -Dsonar.token=${{ secrets.SONAR_TOKEN }}
 #      - run: echo "${{ secrets.SONAR_TOKEN }}"
