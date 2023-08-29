@@ -1,0 +1,6 @@
+projectKey=Main_node
+serverUrl=http://localhost:9090
+serverVersion=10.1.0.73491
+dashboardUrl=http://localhost:9090/dashboard?id=Main_node
+ceTaskId=AYpAOGRQI0EdGDbzTGbY
+ceTaskUrl=http://localhost:9090/api/ce/task?id=AYpAOGRQI0EdGDbzTGbY
