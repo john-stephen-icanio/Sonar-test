@@ -15,5 +15,13 @@ jobs:
       - run: pwd
       - run: ls
       - run: sonar-scanner 
-      - run: cd /home/icanio10096/icanio/Shell-Script/SonarQube ; ./sonar-args.sh omg-sonar-omg
-     
+      - run: OMG=$(cd /home/icanio10096/icanio/Shell-Script/SonarQube ; ./sonar-args.sh omg-sonar-omg)
+      - run: echo "$OMG"
+      - name: difficult
+        run: |
+         if [ "$OMG" -eq "Success" ]
+         then
+            echo "Test Passed"
+         else
+            echo "Test Failed"
+         fi
