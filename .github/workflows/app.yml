@@ -16,7 +16,7 @@ jobs:
       - run: ls
       - run: sonar-scanner 
       - name: difficult
-      - run: |
+        run: |
          OMG=$(cd /home/icanio10096/icanio/Shell-Script/SonarQube ; ./sonar-args.sh omg-sonar-omg)
          echo "$OMG"
          if [ "$OMG" -eq "Success" ]
